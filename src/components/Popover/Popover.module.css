@@ -1,0 +1,75 @@
+.PopoverContent {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  width: max-content;
+  max-width: min(calc(100vw - 20px), 600px);
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.PopoverHeading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--var-dark);
+}
+
+.PopoverDescription {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--var-dark);
+}
+
+/* --- Popover Trigger --- */
+
+.PopoverTrigger {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: background-color, outline-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.PopoverTrigger:focus-visible {
+  outline-color: var(--color-tertiary);
+}
+
+.PopoverTrigger:hover:not(:active) {
+  background-color: var(--color-tertiary);
+}
+
+/* --- Popover Close --- */
+
+.PopoverClose {
+  justify-self: center;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: background-color, outline-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.PopoverClose:focus-visible {
+  outline-color: var(--color-tertiary);
+}
+
+.PopoverClose:hover:not(:active) {
+  background-color: var(--color-tertiary);
+}

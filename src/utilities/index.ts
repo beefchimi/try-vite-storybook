@@ -1,0 +1,1 @@
+export {placeholderText} from './placeholder';

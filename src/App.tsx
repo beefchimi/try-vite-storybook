@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {Controlled, Uncontrolled} from './demo';
+import {Brand} from './sections';
+import {placeholderText} from './utilities';
+
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isControlled = false;
+  const contentMarkup = placeholderText(10).map((text) => (
+    <p key={text}>{text}</p>
+  ));
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <header>
+        <h1>Floating UI — Popover</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Originally forked from:{' '}
+          <a
+            href="https://floating-ui.com/docs/popover"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://floating-ui.com/docs/popover
+          </a>
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </header>
+
+      <main>
+        <h2>Popover Demo</h2>
+
+        <Brand />
+
+        <section className="Demo">
+          {isControlled ? <Controlled /> : <Uncontrolled />}
+        </section>
+
+        <article className="Typography">{contentMarkup}</article>
+      </main>
+
+      <footer>
+        <h6>&copy; All rights belong to some guy on a computer.</h6>
+      </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
