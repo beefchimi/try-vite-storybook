@@ -1,5 +1,4 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
 
 import {Header} from './Header';
 
@@ -10,11 +9,6 @@ const meta = {
   component: Header,
   parameters: {
     layout: 'fullscreen',
-  },
-  args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
   },
 } satisfies Meta<typeof Header>;
 
